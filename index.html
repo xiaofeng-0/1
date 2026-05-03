@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaMart - 虚拟商品商城</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: rgba(255, 255, 255, 0.08);
+        --text: #f5f7ff;
+        --muted: #b7c0dc;
+        --accent: #6ea8ff;
+        --accent-2: #8c6bff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+        background:
+          radial-gradient(circle at 20% 20%, rgba(110, 168, 255, 0.25), transparent 40%),
+          radial-gradient(circle at 80% 0%, rgba(140, 107, 255, 0.25), transparent 35%),
+          var(--bg);
+        color: var(--text);
+      }
+      .container {
+        width: min(1120px, 92vw);
+        margin: 0 auto;
+      }
+      .hero {
+        padding: 96px 0 64px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      h1 {
+        margin: 20px 0 16px;
+        font-size: clamp(36px, 6vw, 62px);
+        line-height: 1.08;
+      }
+      .lead {
+        max-width: 640px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.8;
+      }
+      .actions { margin-top: 30px; display: flex; gap: 14px; }
+      .btn {
+        text-decoration: none;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        transition: .2s ease;
+      }
+      .btn-primary {
+        color: #fff;
+        background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      }
+      .btn-secondary {
+        color: var(--text);
+        border-color: rgba(255,255,255,0.35);
+        background: rgba(255,255,255,0.05);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+        padding-bottom: 80px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 18px;
+        padding: 22px;
+        backdrop-filter: blur(12px);
+      }
+      .card h3 { margin: 0 0 10px; font-size: 18px; }
+      .card p { margin: 0; color: var(--muted); line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <span class="badge">全新首页 · 极简大气</span>
+        <h1>一站式虚拟商品商城<br />快速、稳定、安心交付</h1>
+        <p class="lead">
+          覆盖会员订阅、数字礼品卡、游戏点券、AI 服务额度等热门虚拟商品。
+          透明定价与自动发货系统，帮助你在几秒内完成购买。
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#">立即选购</a>
+          <a class="btn btn-secondary" href="#">了解保障</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>极速发货</h3>
+          <p>订单确认后自动交付，常规商品最快 10 秒到账。</p>
+        </article>
+        <article class="card">
+          <h3>正版货源</h3>
+          <p>精选授权渠道，保障兑换稳定性与售后服务质量。</p>
+        </article>
+        <article class="card">
+          <h3>企业级风控</h3>
+          <p>多层反欺诈策略，实时识别异常交易，降低风险。</p>
+        </article>
+        <article class="card">
+          <h3>7×24 客服</h3>
+          <p>提供全天候在线支持，帮助你快速处理订单问题。</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
